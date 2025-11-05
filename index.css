@@ -60,3 +60,17 @@ article {
 article .cikk:nth-child(3){
     order:-10;
 }
+
+@media screen and (max-width:600px) {
+    
+nav ul{
+    grid-template-columns: 1fr;
+   
+    /* GRID használata */
+    grid-auto-flow: row;
+    /* egymás mellé kerüljenek */
+  
+    /* középre igazítás függőlegesen */
+    gap: 5px;
+}
+}

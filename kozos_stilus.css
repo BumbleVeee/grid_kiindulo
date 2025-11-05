@@ -6,7 +6,8 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2em
+    font-size: 1.2em;
+    background-color: rgb(245, 236, 220);
 }
 
 main,
@@ -20,6 +21,7 @@ main {
     width: 90%;
     max-width: 900px;
     margin:auto;
+    background-color: #fff;
 }
 p {
     padding:10pt 0 ;

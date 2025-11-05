@@ -46,41 +46,70 @@ article {
     grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
 
     gap: 20px;
-    justify-content:space-around;
+    justify-content: space-around;
 
- 
+
 }
 
 .cikk {
-    display:grid;
+    display: grid;
     grid-template-rows: 250px 100px auto;
 }
-.cikk div{
-    order:-1
+
+.cikk div {
+    order: -1
 }
 
 main {
-    max-width:1000px;
-    display:grid;
+    max-width: 1000px;
+    display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-areas: "h h"
-                        "n n"
-                        "ar as"
-                        "f f";
-}
-header{
-    grid-area:h
-}
-nav{
-    grid-area:n
-}
-article{
-    grid-area:ar
-}
-aside{
-    grid-area:as
-}
-footer{
-    grid-area:f
+        "n n"
+        "ar as"
+        "f f";
 }
 
+header {
+    grid-area: h
+}
+
+nav {
+    grid-area: n
+}
+
+article {
+    grid-area: ar
+}
+
+aside {
+    grid-area: as
+}
+
+footer {
+    grid-area: f
+}
+
+@media screen and (max-width:600px) {
+    main {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+            "n"
+            "as"
+            " ar"
+            "f ";
+    }
+
+    nav ul {
+        grid-template-columns: 1fr;
+
+        /* GRID használata */
+        grid-auto-flow: row;
+        /* egymás mellé kerüljenek */
+
+        /* középre igazítás függőlegesen */
+        gap: 5px;
+    }
+}

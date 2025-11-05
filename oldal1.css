@@ -58,3 +58,18 @@ article {
     direction: ltr;
     /* a tartalom maradjon normális irányban */
 }
+
+
+@media screen and (max-width:600px) {
+    
+nav ul{
+    grid-template-columns: 1fr;
+   
+    /* GRID használata */
+    grid-auto-flow: row;
+    /* egymás mellé kerüljenek */
+  
+    /* középre igazítás függőlegesen */
+    gap: 5px;
+}
+}
