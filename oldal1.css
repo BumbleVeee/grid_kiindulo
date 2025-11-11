@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+nav{
+    background: rgb(77, 77, 77);
+    border: 5px solid gray;
+}
+
+nav ul{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;     /* egymás mellé helyezi az elemeket */
+    justify-content: center;    /* középre vízszintesen */
+    align-items: center;        /* középre függőlegesen */
+    gap: 2rem;                  /* térköz a linkek között */
+    padding: 10px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+article{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    direction: rtl;
+    align-items: center;
+}
+
+.cikk{
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    direction: ltr;
+}
+
+
+
+@media (min-width: 800px) {
+    article {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    grid-auto-flow: row;          /* a menüpontok egymás alá kerülnek */
+    justify-items: center;        /* minden link középre kerül */
+    gap: 1rem;
+  }
+  article {
+        grid-template-columns: 1fr;
+    }
+}
